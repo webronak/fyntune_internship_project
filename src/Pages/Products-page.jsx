@@ -2,6 +2,7 @@ import React from 'react';
 import  './products-page.stylesheet.css';
 import Navbar from '../Components/Navbar';
 import ProductCard from '../Components/product-card';
+import products from '../PRODUCTS_DATA.js';
 
 class ProductPage extends React.Component{
     render(){
@@ -9,7 +10,13 @@ class ProductPage extends React.Component{
             <div className="product-page">
                 <Navbar/>
                 <div className="product-display">
-                    <ProductCard/>
+                {
+                    products.map(product=>{
+                        return (
+                            <ProductCard product={product} key={product._id}/>
+                        );
+                    })     
+                }
                 </div>
             </div>
         )

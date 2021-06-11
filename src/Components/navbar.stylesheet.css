@@ -6,10 +6,12 @@
     padding: 15px 10px;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    top: 0px;
 }
 .navbar .nav-head{
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .navbar .btn{
     background-color: #4DA8DA;
