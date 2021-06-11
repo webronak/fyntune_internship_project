@@ -1,0 +1,16 @@
+.checkout-page{
+    width: 90%;
+    margin: auto;
+}
+.checkout-page form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 66px;
+    min-height: 400px;
+    max-height: 90vh;
+    justify-content: space-evenly;
+}
+.confirm-btn{
+    max-width: 30%;
+    min-width: 200px;
+}

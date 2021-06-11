@@ -40,3 +40,13 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.check-out-btn{
+    background-color: #4DA8DA;
+    margin: 20px auto;
+    display: block;
+    text-decoration: none;
+}
+.empty-msg{
+    margin: 100px auto;
+    color: grey;
+}

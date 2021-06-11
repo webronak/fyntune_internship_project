@@ -1,7 +1,7 @@
 import {addCartItems, reduceCartItems} from './cart.utils';
 
 const INNITIAL_STATE = {
-    cartItems:[]
+    cartItems:[],
 }
 
 const cartReducer = (state =  INNITIAL_STATE, action)=>{

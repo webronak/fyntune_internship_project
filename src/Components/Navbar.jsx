@@ -1,25 +1,29 @@
 import React from "react";
 import "./navbar.stylesheet.css";
 // for routing
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="navbar">
-      <div className="nav-head">My Store</div>
+      <Link to="/">
+        <div className="nav-head">My Store</div>
+      </Link>
       <div>
-      <Link to="/products">
-        <button className="btn">Products</button>
+        <Link to="/products">
+          <button className="btn">Products</button>
         </Link>
-      <Link to="/cart">
-        <button className="btn">Cart</button>
-        </Link>
-        <Link to="/check_out">
-        <button className="btn">Check out</button>
+        <Link to="/cart">
+          <button className="btn">Cart<span className="indicator">{props.itemsQuantity}</span></button>
         </Link>
       </div>
     </div>
   );
 };
-
-export default Navbar;
+const mapStateToProps = state => ({
+  itemsQuantity:state.cart.cartItems.reduce((acc,item)=>{
+    return acc+=item.quantity;
+  },0)
+})
+export default connect(mapStateToProps)(Navbar);

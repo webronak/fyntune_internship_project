@@ -16,4 +16,12 @@
 .navbar .btn{
     background-color: #4DA8DA;
     margin: 0px 5px;
+    position: relative;
+}
+.indicator{
+    position: absolute;
+    top: -6px;
+    padding: 1px;
+    background-color: rgb(230, 0, 0);
+    border-radius: 10px;
 }
